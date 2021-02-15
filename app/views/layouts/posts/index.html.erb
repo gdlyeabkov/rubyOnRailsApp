@@ -1,0 +1,11 @@
+# <h3>главная страница</h3>
+<h1>все наши посты</h1>
+<% @post.each do |post| %>
+   <div class="alert alert-light">
+        <%= link_to 'читать далее', post_path(post), :class=>'btn btn-default' %>
+            <h3>
+                <%= post.title %>
+                <%= post.body %>
+            </h3>
+    </div>
+<% end %>
